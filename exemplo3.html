@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando texto</title>
+    <script>
+        window.onload = inicio;
+
+        function inicio() {
+            let opcao = document.getElementById('opcao');
+            opcao.addEventListener('change', mudou);
+        }
+
+        function mudou() {
+            saida.innerHTML = opcao.value;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="">Digite algo:</label>
+    <input type="text" id="opcao">
+    <p id="saida"></p>
+</body>
+
+</html>

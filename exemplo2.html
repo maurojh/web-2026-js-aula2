@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando img</title>
+    <style>
+        img {
+            width: 40%;
+        }
+    </style>
+    <script>
+        window.onload = inicio;
+
+        let figura;
+
+        function inicio() {
+            figura = document.getElementById('imagem');
+
+            let botaoSand = document.getElementById('btn-sand');
+            botaoSand.addEventListener('click', sand);
+            let botaoRefri = document.getElementById('btn-refri');
+            botaoSand.addEventListener('click', refri);
+        }
+
+        function sand() {
+            figura.src = "img/so_hamb.png";
+        }
+
+        function refri() {
+            figura.src = "img/so_refri.png";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="img/nada.png" id="imagem">
+    <button id="btn-sand">Sanduíche</button>
+    <button id="btn-refri">Refrigerante</button>
+</body>
+
+</html>

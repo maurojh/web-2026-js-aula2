@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando texto</title>
+    <script>
+        window.onload = inicio;
+
+        let valorBR, saldoBR;
+
+        function inicio() {
+            saldo.addEventListener('change', mudaSaldo);
+            valor.addEventListener('change', mudaValor);
+        }
+
+        function mudaSaldo() {
+            let valor = saldo.value;
+            saldoBR = parseFloat(valor.replace(',', '.'));
+        }
+
+        function mudaValor() {
+            let valor = valor.value;
+            valorBR = parseFloat(valor.replace(',', '.'));
+        }
+    </script>
+</head>
+
+<body>
+    <label for="">Dinheiro:</label>
+    <input type="text" id="saldo"><br>
+    <label for="">Valor do item:</label>
+    <input type="text" id="valor"><br>
+    <button id="btn">Calcular</button>
+    <p id="saida">Quantidade</p>
+</body>
+
+</html>

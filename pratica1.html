@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        table,
+        td,
+        tr,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        window.onload = inicio;
+
+        function inicio() {
+            let nome = "Fulano de Tal";
+            let nota = "7.5";
+            let matriculado = "false";
+
+            if (matriculado) {
+                mostra_nome(nome);
+                mostra_nota(nota);
+            }
+        }
+
+        function mostra_nome(n) {
+            let lugar_nome = document.getElementById('nome');
+            lugar_nome.innerHTML = n;
+        }
+
+        function mostra_nota(valor) {
+            let lugar_nota = document.getElementById('nota');
+            mostra_situacao(valor);
+            let original_nota = "" + valor;
+            let pt_nota = original_nota.replace('.', ',');
+            lugar_nota.innerHTML = pt_nota;
+        }
+
+        function mostra_situacao(n) {
+            let lugar_situacao = document.getElementById('situacao');
+            lugar_situacao.innerHTML = (n >= 6.0) ? "aprovado" : "reprovado";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Aluno:</h1>
+    <table>
+        <tr>
+            <th>Nome:</th>
+            <th>Nota:</th>
+            <th>Situação:</th>
+        </tr>
+        <tr>
+            <td id="nome"></td>
+            <td id="nota"></td>
+            <td id="situacao"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
