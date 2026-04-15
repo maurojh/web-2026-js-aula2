@@ -11,13 +11,11 @@
         let campo_nome, campo_media, campo_ifa, botao, campo_saida;
 
         function inicio() {
-            campo_nome = document.getElementById('nome').value;
+            campo_nome = document.getElementById('nome');
 
             campo_media = document.getElementById('media');
-            let media = parseFloat(campo_media.value);
 
             campo_ifa = document.getElementById('ifa');
-            let ifa = parseFloat(campo_ifa.value);
 
             botao = document.getElementById('botao');
             botao.addEventListener('click', verificar);
